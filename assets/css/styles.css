@@ -1,0 +1,288 @@
+/* assets/css/styles.css */
+
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variables de color */
+:root {
+    --primary-color: #1a237e; /* Azul marino */
+    --secondary-color: #424242; /* Gris oscuro */
+    --accent-color-green: #4caf50; /* Verde */
+    --accent-color-orange: #ff9800; /* Naranja */
+    --text-color: #212121;
+    --background-color: #f5f5f5;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.nav-link, .navbar-brand {
+    color: #fff !important;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Estilos para la página de presentación */
+.presentation-header {
+    background-image: url('../img/presentation-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.presentation-header h1 {
+    font-size: 3em;
+}
+
+.presentation-header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.presentation-buttons .btn {
+    margin: 5px;
+    font-size: 1.1em;
+    padding: 10px 20px;
+}
+
+.presentation-section {
+    padding: 60px 0;
+}
+
+.presentation-section h2 {
+    margin-bottom: 30px;
+}
+
+.presentation-section .col-md-4 i {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las tarjetas de acciones en transactions.html */
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1em;
+}
+
+/* Estilos para la tabla en history.html */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 0.9em;
+}
+
+/* Estilos para el menú de usuario en el navbar */
+.navbar .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Responsividad */
+
+/* Ajustes generales para todos los tamaños */
+.container-fluid, .container {
+    flex: 1;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Asegurar que el contenedor ocupe el 100% del ancho */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .nav-link {
+        font-size: 1.1em;
+    }
+
+    .presentation-header {
+        padding: 60px 0;
+    }
+
+    .presentation-header h1 {
+        font-size: 2.5em;
+    }
+
+    .presentation-header p {
+        font-size: 1.1em;
+    }
+
+    .presentation-buttons .btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .presentation-section {
+        padding: 40px 0;
+    }
+
+    .presentation-section h2 {
+        font-size: 2em;
+    }
+
+    .presentation-section .col-md-4 {
+        margin-bottom: 30px;
+    }
+
+    .presentation-section .col-md-4 h3 {
+        font-size: 1.5em;
+    }
+
+    .presentation-section .col-md-4 p {
+        font-size: 1em;
+    }
+
+    /* Ajustes para tarjetas en transactions.html */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-body h5 {
+        font-size: 1.3em;
+    }
+
+    .card-body p {
+        font-size: 1.1em;
+    }
+
+    /* Ajustes para botones */
+    .btn {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+
+    /* Ajustes para formularios */
+    .form-control {
+        font-size: 1.1em;
+    }
+
+    .form-label {
+        font-size: 1.1em;
+    }
+
+    /* Ajustes para tablas */
+    .table {
+        font-size: 1em;
+    }
+
+    /* Aumentar espacios */
+    .mt-5, .my-5 {
+        margin-top: 4rem !important;
+    }
+
+    .mb-4, .my-4 {
+        margin-bottom: 3rem !important;
+    }
+
+    /* Ajustes para el footer */
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.3em;
+    }
+
+    .nav-link {
+        font-size: 1.1em;
+    }
+
+    .presentation-header h1 {
+        font-size: 2.2em;
+    }
+
+    .presentation-header p {
+        font-size: 1em;
+    }
+
+    .presentation-buttons .btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .presentation-section h2 {
+        font-size: 1.8em;
+    }
+
+    .presentation-section .col-md-4 h3 {
+        font-size: 1.4em;
+    }
+
+    .presentation-section .col-md-4 p {
+        font-size: 1em;
+    }
+
+    /* Ajustes para tarjetas en transactions.html */
+    .card-body h5 {
+        font-size: 1.2em;
+    }
+
+    .card-body p {
+        font-size: 1em;
+    }
+
+    /* Ajustes para botones */
+    .btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    /* Ajustes para formularios */
+    .form-control {
+        font-size: 1em;
+    }
+
+    .form-label {
+        font-size: 1em;
+    }
+
+    /* Ajustes para tablas */
+    .table {
+        font-size: 0.95em;
+    }
+
+    /* Ajustes para el footer */
+    .footer {
+        padding: 15px 0;
+    }
+}

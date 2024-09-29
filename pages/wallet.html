@@ -1,0 +1,64 @@
+<!-- pages/wallet.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Billetera - Chanchito Inversiones</title>
+    <!-- Bootstrap CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- FontAwesome CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h2>Mi Billetera</h2>
+        <div class="card">
+            <div class="card-body">
+                <h4>Saldo Disponible: $2,500</h4>
+                <button class="btn btn-success"><i class="fas fa-plus"></i> Depositar Fondos</button>
+                <button class="btn btn-danger"><i class="fas fa-minus"></i> Retirar Fondos</button>
+            </div>
+        </div>
+        <h3 class="mt-4">Historial de Transacciones</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Monto</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/10/2023</td>
+                    <td>Depósito</td>
+                    <td>$1,000</td>
+                    <td>Depósito bancario</td>
+                </tr>
+                <tr>
+                    <td>15/10/2023</td>
+                    <td>Retiro</td>
+                    <td>$500</td>
+                    <td>Transferencia a cuenta</td>
+                </tr>
+                <!-- Más transacciones ficticias -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/app.js"></script>
+    <!-- Bootstrap JS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

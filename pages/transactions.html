@@ -1,0 +1,143 @@
+<!-- pages/transactions.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transacciones - Chanchito Inversiones</title>
+    <!-- Bootstrap CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- FontAwesome CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Chart.js CSS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h2>Transacciones</h2>
+        <!-- Buscador de acciones -->
+        <div class="my-4">
+            <input type="text" class="form-control" id="searchStock" placeholder="Buscar acciones (e.g., AAPL, GOOGL)">
+        </div>
+        <!-- Lista de acciones simuladas -->
+        <div class="row">
+            <!-- Acción 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Apple Inc. (AAPL)</h5>
+                        <p class="card-text">Precio Actual: $150</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartAAPL"></canvas>
+                        <script>
+                            const ctxAAPL = document.getElementById('chartAAPL').getContext('2d');
+                            new Chart(ctxAAPL, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [148, 149, 150, 151, 150],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones de compra y venta -->
+                        <button class="btn btn-success mt-3 w-100">Comprar</button>
+                        <button class="btn btn-danger mt-2 w-100">Vender</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Acción 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Alphabet Inc. (GOOGL)</h5>
+                        <p class="card-text">Precio Actual: $2800</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartGOOGL"></canvas>
+                        <script>
+                            const ctxGOOGL = document.getElementById('chartGOOGL').getContext('2d');
+                            new Chart(ctxGOOGL, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [2750, 2780, 2790, 2810, 2800],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones de compra y venta -->
+                        <button class="btn btn-success mt-3 w-100">Comprar</button>
+                        <button class="btn btn-danger mt-2 w-100">Vender</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Acción 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Amazon.com Inc. (AMZN)</h5>
+                        <p class="card-text">Precio Actual: $3400</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartAMZN"></canvas>
+                        <script>
+                            const ctxAMZN = document.getElementById('chartAMZN').getContext('2d');
+                            new Chart(ctxAMZN, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [3350, 3370, 3380, 3400, 3400],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones de compra y venta -->
+                        <button class="btn btn-success mt-3 w-100">Comprar</button>
+                        <button class="btn btn-danger mt-2 w-100">Vender</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Puedes agregar más acciones simuladas -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/app.js"></script>
+    <!-- Bootstrap JS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
