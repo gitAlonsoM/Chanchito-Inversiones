@@ -29,7 +29,6 @@ Copy code
 │   └── footer.html          # Pie de página
 │
 ├── /pages/                  # Páginas individuales de la aplicación
-│   ├── index.html    # Página de presentación
 │   ├── login.html           # Página de inicio de sesión
 │   ├── register.html        # Página de registro
 │   ├── dashboard.html       # Página principal después de iniciar sesión
@@ -40,7 +39,11 @@ Copy code
 │   ├── automation.html      # (Sin funcionalidad por ahora)
 │   ├── charts.html          # (Sin funcionalidad por ahora)
 │   └── password-reset.html  # (Sin funcionalidad por ahora)
-Funcionalidades de los Archivos
+│ 
+├── index.html    # Página de presentación a nivel raiz (requisito en github pages)
+
+
+## Funcionalidades de los Archivos
 /assets/css/styles.css
 Descripción: Contiene los estilos personalizados de la aplicación, incluyendo la definición de colores, tipografías y estilos para diferentes componentes.
 Características Clave:
@@ -53,7 +56,7 @@ Funciones Principales:
 loadComponents(): Carga dinámicamente el navbar y el footer en cada página.
 updateNavbar(): Actualiza el navbar según el estado de sesión (mostrando "Bienvenido, Juan" y "Cerrar sesión" cuando el usuario está logueado).
 login(): Simula el inicio de sesión almacenando un indicador en localStorage y redirige al dashboard.
-logout(): Simula el cierre de sesión eliminando el indicador de localStorage y redirige a la página de presentación.
+logout(): Simula el cierre de sesión eliminando el indicador de localStorage y redirige a la página de index.
 /components/navbar.html
 Descripción: Contiene el código HTML para la barra de navegación que se incluye en las páginas después de iniciar sesión.
 Características Clave:
@@ -65,7 +68,7 @@ Descripción: Contiene el código HTML para el pie de página común en todas la
 Características Clave:
 Información de derechos de autor.
 Puede incluir enlaces a políticas de privacidad, términos de servicio, etc.
-/pages/index.html
+index.html
 Descripción: Página de presentación que introduce al usuario a la plataforma.
 Características Clave:
 Header de Presentación: Incluye un mensaje de bienvenida, descripción y botones para "Iniciar Sesión" y "Registrarse".
@@ -110,13 +113,16 @@ Otros Archivos
 automation.html, charts.html, password-reset.html:
 Estado: Actualmente sin funcionalidad.
 Futuro: Se espera implementar funcionalidades específicas en futuras versiones.
-Funcionalidades Implementadas
+
+## Funcionalidades Implementadas
 Navegación entre páginas: Utilizando enlaces estáticos y componentes reutilizables.
 Simulación de autenticación: Uso de localStorage para simular el estado de sesión.
 Carga dinámica de componentes: Navbar y footer se cargan dinámicamente en las páginas.
 Interfaz responsiva: Diseño adaptado para dispositivos móviles y de escritorio.
 Contenido estático: Datos ficticios para simular funcionalidades en transacciones y historial.
-Funcionalidades Pendientes
+
+
+## Funcionalidades Pendientes
 Implementación de funcionalidades en:
 automation.html: Automatización de inversiones.
 charts.html: Visualización de gráficos en tiempo real.
@@ -124,13 +130,8 @@ password-reset.html: Restablecimiento de contraseña.
 Integración con backend: Autenticación real, manejo de datos dinámicos y almacenamiento.
 Validaciones y seguridad: Implementar validaciones de formularios y medidas de seguridad.
 Mejoras en la UI/UX: Añadir más interactividad y mejorar la experiencia del usuario.
-Cómo Ejecutar el Proyecto
-Clonar o descargar el repositorio en tu máquina local.
-Abrir el archivo index.html ubicado en la carpeta /pages/ en tu navegador web.
-Navegar por las diferentes secciones utilizando los enlaces y botones disponibles.
-Iniciar sesión: Desde la página de presentación, haz clic en "Iniciar Sesión" y utiliza cualquier correo y contraseña (la autenticación es simulada).
-Cerrar sesión: En el navbar, haz clic en "Bienvenido, Juan" y selecciona "Cerrar sesión" para regresar a la página de presentación.
-Tecnologías Utilizadas
+
+## Tecnologías Utilizadas
 HTML5: Estructura de las páginas.
 CSS3: Estilos y diseño responsivo.
 JavaScript (ES6): Funcionalidad y manipulación del DOM.
