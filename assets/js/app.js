@@ -71,8 +71,9 @@ function login() {
 function logout() {
     localStorage.removeItem('loggedIn');
     // Redirigir a la página de presentación
-    window.location.href = '../index.html';
+    window.location.href = '../index.html'; 
 }
+
 
 // Ejecutar al cargar el DOM
 document.addEventListener('DOMContentLoaded', loadComponents);
