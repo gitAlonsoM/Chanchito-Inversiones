@@ -29,7 +29,7 @@ Copy code
 │   └── footer.html          # Pie de página
 │
 ├── /pages/                  # Páginas individuales de la aplicación
-│   ├── presentation.html    # Página de presentación
+│   ├── index.html    # Página de presentación
 │   ├── login.html           # Página de inicio de sesión
 │   ├── register.html        # Página de registro
 │   ├── dashboard.html       # Página principal después de iniciar sesión
@@ -65,7 +65,7 @@ Descripción: Contiene el código HTML para el pie de página común en todas la
 Características Clave:
 Información de derechos de autor.
 Puede incluir enlaces a políticas de privacidad, términos de servicio, etc.
-/pages/presentation.html
+/pages/index.html
 Descripción: Página de presentación que introduce al usuario a la plataforma.
 Características Clave:
 Header de Presentación: Incluye un mensaje de bienvenida, descripción y botones para "Iniciar Sesión" y "Registrarse".
@@ -126,7 +126,7 @@ Validaciones y seguridad: Implementar validaciones de formularios y medidas de s
 Mejoras en la UI/UX: Añadir más interactividad y mejorar la experiencia del usuario.
 Cómo Ejecutar el Proyecto
 Clonar o descargar el repositorio en tu máquina local.
-Abrir el archivo presentation.html ubicado en la carpeta /pages/ en tu navegador web.
+Abrir el archivo index.html ubicado en la carpeta /pages/ en tu navegador web.
 Navegar por las diferentes secciones utilizando los enlaces y botones disponibles.
 Iniciar sesión: Desde la página de presentación, haz clic en "Iniciar Sesión" y utiliza cualquier correo y contraseña (la autenticación es simulada).
 Cerrar sesión: En el navbar, haz clic en "Bienvenido, Juan" y selecciona "Cerrar sesión" para regresar a la página de presentación.

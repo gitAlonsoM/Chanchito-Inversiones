@@ -6,8 +6,8 @@ function loadComponents() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
 
-    // Cargar Navbar (excepto en presentation.html y login.html)
-    if (page !== 'presentation.html' && page !== 'login.html' && page !== 'register.html') {
+    // Cargar Navbar (excepto en index.html y login.html)
+    if (page !== 'index.html' && page !== 'login.html' && page !== 'register.html') {
         fetch('../components/navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -71,7 +71,7 @@ function login() {
 function logout() {
     localStorage.removeItem('loggedIn');
     // Redirigir a la página de presentación
-    window.location.href = 'presentation.html';
+    window.location.href = 'index.html';
 }
 
 // Ejecutar al cargar el DOM
