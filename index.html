@@ -60,6 +60,14 @@
     <!-- Footer -->
     <div id="footer"></div>
 
+    <script>
+        fetch("/components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
     <!-- Scripts -->
     <script src="/assets/js/app.js"></script>
     <!-- Bootstrap JS desde CDN -->
