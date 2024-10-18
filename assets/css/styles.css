@@ -299,3 +299,22 @@ h1, h2, h3, h4, h5, h6 {
         padding: 15px 0;
     }
 }
+
+
+
+/* assets/css/styles.css */
+
+/* Estilos para la nueva barra de navegación */
+.navbar {
+    background-color: #1a237e; /* Azul marino oscuro */
+}
+
+.navbar .nav-link {
+    color: #ffffff !important; /* Colores de los enlaces en blanco */
+}
+
+.navbar .nav-link:hover {
+    color: #ff9800 !important; /* Color al pasar el mouse (naranja) */
+}
+
+/* Otros estilos existentes... */

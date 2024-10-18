@@ -3,6 +3,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chanchito Inversiones</title>
     <!-- Bootstrap CSS desde CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -10,13 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/app.js"></script>
-
-    
-
 </head>
 <body>
-    <!-- Aquí no cargamos el navbar para una presentación limpia -->
+    <!-- Barra de navegación solo para Index, Productos, Quiénes Somos -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Chanchito Inversiones
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pages/products.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pages/about_us.html">Quiénes Somos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Header de Presentación -->
     <header class="presentation-header">
@@ -25,10 +43,7 @@
             <p>La plataforma más sencilla y eficiente para gestionar tus inversiones.</p>
             <div class="presentation-buttons">
                 <a href="pages/login.html" class="btn btn-primary btn-lg">Iniciar Sesión</a>
-
                 <a href="pages/register.html" class="btn btn-secondary btn-lg">Registrarse</a>
-
-                
             </div>
         </div>
     </header>
@@ -58,16 +73,7 @@
     </section>
 
     <!-- Footer -->
-    <!-- <div id="footer"></div>
-
-    <script>
-        fetch("components/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script> -->
-    
+    <div id="footer"></div>
 
     <!-- Scripts -->
     <script src="/assets/js/app.js"></script>
