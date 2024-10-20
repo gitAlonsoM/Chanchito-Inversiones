@@ -45,6 +45,7 @@ function updateNavbar() {
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
                 <li><a class="dropdown-item" href="profile.html">Perfil</a></li>
+                <li><a class="dropdown-item" href="notifications.html">Notificaciónes</a></li>
                 <li><a class="dropdown-item" href="settings.html">Configuración</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>

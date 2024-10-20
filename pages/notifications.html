@@ -1,4 +1,5 @@
 <!--pages\notifications.html -->
+<!-- pages/notifications.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,12 +11,142 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <style>
+        /* Estilos para asegurar que la vista sea óptima en dispositivos móviles */
+        .notification-section {
+            padding: 20px;
+        }
+
+        .notification-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .notification-option {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-check-input {
+            transform: scale(1.2);
+            margin-right: 10px;
+        }
+
+        .notification-label {
+            font-size: 1.1rem;
+        }
+
+        .save-btn {
+            background-color: #1a237e;
+            color: #fff;
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .save-btn:hover {
+            background-color: #ff9800;
+        }
+
+        /* Ajuste de tamaño del cuadro de opciones */
+        @media (max-width: 576px) {
+            .notification-section h2 {
+                font-size: 1.2rem;
+            }
+            .notification-option {
+                padding: 10px;
+            }
+            .notification-label {
+                font-size: 1rem;
+            }
+            .save-btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
 
-    
+    <!-- Contenido principal -->
+    <div class="container notification-section">
+        <h2>Configuración de Notificaciones</h2>
+
+        <!-- Opción de notificación: Precios de Acciones -->
+        <div class="notification-option">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <label class="notification-label">Alertas de precios de acciones</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="stockPriceAlerts" checked>
+                </div>
+            </div>
+            <small class="text-muted">Recibe notificaciones cuando el precio de tus acciones cambie significativamente.</small>
+        </div>
+
+        <!-- Opción de notificación: Automatización de Inversiones -->
+        <div class="notification-option">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <label class="notification-label">Alertas de automatización</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="automationAlerts">
+                </div>
+            </div>
+            <small class="text-muted">Recibe notificaciones sobre los procesos automatizados de tus inversiones.</small>
+        </div>
+
+        <!-- Opción de notificación: Noticias Relevantes -->
+        <div class="notification-option">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <label class="notification-label">Noticias relevantes del mercado</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="newsAlerts" checked>
+                </div>
+            </div>
+            <small class="text-muted">Mantente informado sobre las últimas noticias financieras que pueden afectar tus inversiones.</small>
+        </div>
+
+        <!-- Opción de notificación: Recibir por Correo Electrónico -->
+        <div class="notification-option">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <label class="notification-label">Recibir notificaciones por correo</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                </div>
+            </div>
+            <small class="text-muted">Activa esta opción para recibir notificaciones importantes en tu correo electrónico.</small>
+        </div>
+
+        <!-- Opción de notificación: Recibir por SMS -->
+        <div class="notification-option">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <label class="notification-label">Recibir notificaciones por SMS</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="smsNotifications">
+                </div>
+            </div>
+            <small class="text-muted">Recibe notificaciones críticas por SMS directamente en tu teléfono.</small>
+        </div>
+
+        <!-- Botón para Guardar Cambios -->
+        <button class="save-btn">Guardar Cambios</button>
+    </div>
 
     <!-- Footer -->
     <div id="footer"></div>

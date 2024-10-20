@@ -10,38 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilo adicional para dar espaciado a los botones de acceso rápido */
+        .quick-access-section {
+            margin-bottom: 50px; /* Espaciado extra entre los botones y el footer */
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
 
-
-   
     <!-- Contenido principal -->
-    <div class="container mt-5"> 
+    <div class="container mt-5">
         <h2>Dashboard</h2>
         <div class="row">
-            <!-- Resumen de inversiones -->
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-header">Total Invertido</div>
-                    <div class="card-body">
-                        <h3>$10,000</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- Saldo en billetera -->
+            <!-- Saldo en billetera con botón para ocultar/mostrar -->
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header">Saldo en Billetera</div>
                     <div class="card-body">
-                        <h3>$2,500</h3>
+                        <h3 id="saldoActual">$4500 USD</h3>
+                        <button id="toggleSaldo" class="btn btn-secondary">Ocultar Saldo</button>
                     </div>
                 </div>
-            </div>
-            <!-- Notificaciones -->
-            <div class="col-md-4">
-                <div class="card">
+                <!-- Notificaciones debajo del saldo en billetera -->
+                <div class="card mt-4">
                     <div class="card-header">Notificaciones</div>
                     <div class="card-body">
                         <ul class="list-unstyled">
@@ -52,9 +48,26 @@
                     </div>
                 </div>
             </div>
+            <!-- Gráfico de lo depositado e invertido -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Gráfico de Depósitos e Inversiones (1 Año)</div>
+                    <div class="card-body">
+                        <canvas id="investmentChart"></canvas>
+                        <h5 class="text-center mt-4" id="gananciaTexto">Has ganado: <span id="gananciaTotal"></span> USD (<span id="gananciaPorcentaje"></span>%)</h5>
+                        <!-- Botones para control de gráficos -->
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-outline-primary me-2">1 Mes</button>
+                            <button class="btn btn-outline-primary me-2 active">1 Año</button>
+                            <button class="btn btn-outline-primary">Desde el Origen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Enlaces a funciones clave -->
-        <div class="mt-5">
+
+        <!-- Enlaces a funciones clave con espaciado añadido -->
+        <div class="mt-5 quick-access-section">
             <h3>Acceso Rápido</h3>
             <div class="row">
                 <div class="col-md-3">
@@ -78,7 +91,94 @@
 
     <!-- Scripts -->
     <script src="../assets/js/app.js"></script>
-    <!-- Bootstrap JS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para ocultar/mostrar el saldo y la ganancia -->
+    <script>
+        const saldoActual = document.getElementById('saldoActual');
+        const toggleSaldoBtn = document.getElementById('toggleSaldo');
+        const gananciaTexto = document.getElementById('gananciaTexto');
+        let saldoVisible = true;
+
+        toggleSaldoBtn.addEventListener('click', function() {
+            saldoVisible = !saldoVisible;
+            if (saldoVisible) {
+                saldoActual.textContent = '$4500 USD';
+                gananciaTexto.style.display = 'block';
+                toggleSaldoBtn.textContent = 'Ocultar Saldo';
+            } else {
+                saldoActual.textContent = 'Saldo Oculto';
+                gananciaTexto.style.display = 'none';
+                toggleSaldoBtn.textContent = 'Mostrar Saldo';
+            }
+        });
+    </script>
+
+    <!-- Script para el gráfico -->
+    <script>
+        const ctx = document.getElementById('investmentChart').getContext('2d');
+
+        // Función para generar las últimas 12 etiquetas de meses basadas en la fecha actual
+        function generarEtiquetasUltimosMeses() {
+            const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+            const fechaActual = new Date();
+            const etiquetas = [];
+
+            for (let i = 11; i >= 0; i--) {
+                const fecha = new Date(fechaActual.getFullYear(), fechaActual.getMonth() - i, 1);
+                etiquetas.push(meses[fecha.getMonth()] + ' ' + fecha.getFullYear());
+            }
+
+            return etiquetas;
+        }
+
+        // Datos simulados de depósitos (más estables) e inversiones (más erráticas y superiores)
+        const depositos = [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 4500, 4500, 4500, 4500];
+        const inversiones = [950, 1700, 2100, 2800, 3500, 3200, 4300, 4700, 4200, 4800, 5000, 5400]; // Errática pero superior
+
+        const investmentChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: generarEtiquetasUltimosMeses(),
+                datasets: [
+                    {
+                        label: 'Depósitos',
+                        data: depositos,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 2,
+                        fill: false
+                    },
+                    {
+                        label: 'Inversiones',
+                        data: inversiones,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderWidth: 2,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Calcular la ganancia en dólares y en porcentaje
+        const gananciaTotal = inversiones[inversiones.length - 1] - depositos[depositos.length - 1];
+        const gananciaPorcentaje = ((gananciaTotal / depositos[depositos.length - 1]) * 100).toFixed(1); // Aproximadamente 20%
+
+        // Actualizar el HTML con la ganancia calculada
+        document.getElementById('gananciaTotal').textContent = gananciaTotal.toFixed(2);
+        document.getElementById('gananciaPorcentaje').textContent = gananciaPorcentaje;
+    </script>
 </body>
 </html>

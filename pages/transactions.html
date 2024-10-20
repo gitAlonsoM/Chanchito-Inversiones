@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <!-- Chart.js CSS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilos para los botones más compactos y atractivos */
+        .btn-custom {
+            font-size: 0.9rem;
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .btn-custom-success {
+            background-color: #4caf50;
+            color: white;
+        }
+        .btn-custom-danger {
+            background-color: #f44336;
+            color: white;
+        }
+        .btn-custom-details {
+            background-color: #1a237e;
+            color: white;
+        }
+        .btn-custom-automation {
+            background-color: #ff9800;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -26,12 +51,12 @@
         </div>
         <!-- Lista de acciones simuladas -->
         <div class="row">
-            <!-- Acción 1 -->
+            <!-- Acción 1: Apple -->
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Apple Inc. (AAPL)</h5>
-                        <p class="card-text">Precio Actual: $150</p>
+                        <p class="card-text">Precio Actual: 235.00 USD</p>
                         <!-- Gráfico de la acción -->
                         <canvas id="chartAAPL"></canvas>
                         <script>
@@ -42,7 +67,7 @@
                                     labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
                                     datasets: [{
                                         label: 'Precio',
-                                        data: [148, 149, 150, 151, 150],
+                                        data: [230, 232, 235, 237, 235],
                                         borderColor: 'rgba(26, 35, 126, 1)',
                                         backgroundColor: 'rgba(26, 35, 126, 0.2)',
                                     }]
@@ -54,20 +79,20 @@
                                 }
                             });
                         </script>
-                        <!-- Botones de compra y venta -->
-                        <button class="btn btn-success mt-3 w-100">Comprar</button>
-                        <button class="btn btn-danger mt-2 w-100">Vender</button>
-                        <button class="btn btn-success mt-2 w-100">Ver detalles</button>
-                        <button class="btn btn-danger mt-2 w-100">Automatización</button>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
                     </div>
                 </div>
             </div>
-            <!-- Acción 2 -->
+            <!-- Acción 2: Alphabet -->
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Alphabet Inc. (GOOGL)</h5>
-                        <p class="card-text">Precio Actual: $2800</p>
+                        <p class="card-text">Precio Actual: 163.42 USD</p>
                         <!-- Gráfico de la acción -->
                         <canvas id="chartGOOGL"></canvas>
                         <script>
@@ -78,7 +103,7 @@
                                     labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
                                     datasets: [{
                                         label: 'Precio',
-                                        data: [2750, 2780, 2790, 2810, 2800],
+                                        data: [160, 162, 163, 164, 163],
                                         borderColor: 'rgba(26, 35, 126, 1)',
                                         backgroundColor: 'rgba(26, 35, 126, 0.2)',
                                     }]
@@ -90,20 +115,20 @@
                                 }
                             });
                         </script>
-                        <!-- Botones de compra y venta -->
-                        <button class="btn btn-success mt-3 w-100">Comprar</button>
-                        <button class="btn btn-danger mt-2 w-100">Vender</button>
-                        <button class="btn btn-success mt-2 w-100">Ver detalles</button>
-                        <button class="btn btn-danger mt-2 w-100">Automatización</button>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
                     </div>
                 </div>
             </div>
-            <!-- Acción 3 -->
+            <!-- Acción 3: Amazon -->
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Amazon.com Inc. (AMZN)</h5>
-                        <p class="card-text">Precio Actual: $3400</p>
+                        <p class="card-text">Precio Actual: 188.99 USD</p>
                         <!-- Gráfico de la acción -->
                         <canvas id="chartAMZN"></canvas>
                         <script>
@@ -114,7 +139,7 @@
                                     labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
                                     datasets: [{
                                         label: 'Precio',
-                                        data: [3350, 3370, 3380, 3400, 3400],
+                                        data: [185, 186, 188, 190, 189],
                                         borderColor: 'rgba(26, 35, 126, 1)',
                                         backgroundColor: 'rgba(26, 35, 126, 0.2)',
                                     }]
@@ -126,15 +151,122 @@
                                 }
                             });
                         </script>
-                        <!-- Botones de compra y venta -->
-                        <button class="btn btn-success mt-3 w-100">Comprar</button>
-                        <button class="btn btn-danger mt-2 w-100">Vender</button>
-                        <button class="btn btn-success mt-2 w-100">Ver detalles</button>
-                        <button class="btn btn-danger mt-2 w-100">Automatización</button>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
                     </div>
                 </div>
             </div>
-            <!-- Puedes agregar más acciones simuladas -->
+            <!-- Acción 4: Tesla -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tesla Inc. (TSLA)</h5>
+                        <p class="card-text">Precio Actual: 220.70 USD</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartTSLA"></canvas>
+                        <script>
+                            const ctxTSLA = document.getElementById('chartTSLA').getContext('2d');
+                            new Chart(ctxTSLA, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [215, 218, 220, 222, 221],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Acción 5: NVIDIA Corp -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA Corp (NVDA)</h5>
+                        <p class="card-text">Precio Actual: 138.00 USD</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartNVDA"></canvas>
+                        <script>
+                            const ctxNVDA = document.getElementById('chartNVDA').getContext('2d');
+                            new Chart(ctxNVDA, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [135, 136, 138, 140, 138],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Acción 6: Microsoft Corp -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft Corp (MSFT)</h5>
+                        <p class="card-text">Precio Actual: 418.16 USD</p>
+                        <!-- Gráfico de la acción -->
+                        <canvas id="chartMSFT"></canvas>
+                        <script>
+                            const ctxMSFT = document.getElementById('chartMSFT').getContext('2d');
+                            new Chart(ctxMSFT, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+                                    datasets: [{
+                                        label: 'Precio',
+                                        data: [415, 417, 419, 420, 418],
+                                        borderColor: 'rgba(26, 35, 126, 1)',
+                                        backgroundColor: 'rgba(26, 35, 126, 0.2)',
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: { beginAtZero: false }
+                                    }
+                                }
+                            });
+                        </script>
+                        <!-- Botones -->
+                        <button class="btn btn-custom btn-custom-success">Comprar</button>
+                        <button class="btn btn-custom btn-custom-danger">Vender</button>
+                        <button class="btn btn-custom btn-custom-details">Ver detalles</button>
+                        <button class="btn btn-custom btn-custom-automation">Automatización</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
