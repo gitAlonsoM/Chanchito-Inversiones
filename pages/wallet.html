@@ -40,7 +40,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="balance-container">
-                    <h4 id="saldoActual">Saldo Disponible: $4500</h4>
+                    <h4 id="saldoActual">Saldo Disponible: $3400</h4>
                     <button class="btn btn-secondary" id="toggleSaldo">Ocultar Saldo</button>
                 </div>
                 <button class="btn btn-success mt-3"><i class="fas fa-plus"></i> Depositar Fondos</button>
@@ -162,7 +162,7 @@
         toggleSaldoBtn.addEventListener('click', function() {
             saldoVisible = !saldoVisible;
             if (saldoVisible) {
-                saldoActual.textContent = 'Saldo Disponible: $4500';
+                saldoActual.textContent = 'Saldo Disponible: $3400';
                 toggleSaldoBtn.textContent = 'Ocultar Saldo';
             } else {
                 saldoActual.textContent = 'Saldo Oculto';
