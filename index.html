@@ -1,4 +1,5 @@
 <!-- index.html -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +12,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Estilo para mejorar la visualización del texto con fondo oscuro */
+        .highlighted-text {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+            color: #fff; /* Texto blanco */
+            padding: 10px 15px; /* Relleno para hacer el texto más legible */
+            border-radius: 5px; /* Bordes redondeados para un look moderno */
+            display: inline-block; /* Asegura que el fondo solo se ajuste al texto */
+            margin-top: 20px; /* Separación superior */
+        }
+
+        /* Aplicar también al título */
+        .highlighted-title {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+            color: #fff; /* Texto blanco */
+            padding: 15px 20px; /* Relleno extra para el título */
+            border-radius: 5px; /* Bordes redondeados */
+            display: inline-block; /* Asegura que el fondo solo se ajuste al título */
+            margin-bottom: 20px; /* Separación inferior */
+        }
+    </style>
 </head>
 <body>
     <!-- Barra de navegación solo para Index, Productos, Quiénes Somos -->
@@ -39,9 +61,9 @@
     <!-- Header de Presentación -->
     <header class="presentation-header">
         <div class="container">
-            <h1>Bienvenido a Chanchito Inversiones</h1>
-            <p>La plataforma más sencilla y eficiente para gestionar tus inversiones.</p>
-            <div class="presentation-buttons">
+            <h1 class="highlighted-title">Chanchito Inversiones</h1>
+            <p class="highlighted-text">La plataforma más sencilla y eficiente para gestionar tus inversiones.</p>
+            <div class="presentation-buttons mt-3">
                 <a href="pages/login.html" class="btn btn-primary btn-lg">Iniciar Sesión</a>
                 <a href="pages/register.html" class="btn btn-secondary btn-lg">Registrarse</a>
             </div>
