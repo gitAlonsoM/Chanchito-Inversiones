@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte - Chanchito Inversiones</title>
+    <title>Soporte Técnico - Chanchito Inversiones</title>
     <!-- Bootstrap CSS desde CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- FontAwesome CSS desde CDN -->
@@ -13,82 +12,46 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                Chanchito Inversiones
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="products.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="about_us.html">Quiénes Somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="support.html">Soporte</a>
-                    </li>
+    <div id="navbar"></div>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Soporte Técnico</h1>
+        <p>Si necesitas asistencia, estamos aquí para ayudarte. Utiliza las siguientes opciones para ponerte en contacto con nosotros o revisar las preguntas frecuentes.</p>
+
+        <!-- Chat en Vivo -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Chat en Vivo</h5>
+                <p class="card-text">Inicia un chat con uno de nuestros agentes de soporte para obtener ayuda en tiempo real.</p>
+                <button class="btn btn-primary">Iniciar Chat</button>
+            </div>
+        </div>
+
+        <!-- Preguntas Frecuentes -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Preguntas Frecuentes</h5>
+                <p class="card-text">Revisa las respuestas a las preguntas más comunes que nuestros usuarios tienen sobre la plataforma.</p>
+                <ul>
+                    <li><a href="#">¿Cómo puedo retirar mis fondos?</a></li>
+                    <li><a href="#">¿Qué hago si no puedo comprar acciones?</a></li>
+                    <li><a href="#">¿Cómo configuro la automatización de mis inversiones?</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
 
-    <!-- Contenido principal -->
-    <div class="container mt-5">
-        <h1>Soporte Técnico</h1>
-        <p>¿Tienes alguna duda o inconveniente? Nuestro equipo de soporte está aquí para ayudarte. A través de nuestro chat en tiempo real, podrás ponerte en contacto con uno de nuestros especialistas para resolver cualquier consulta que tengas sobre nuestra plataforma.</p>
-
-        <h2>Cómo Podemos Ayudarte</h2>
-        <ul>
-            <li>Resolver dudas sobre el funcionamiento de la plataforma.</li>
-            <li>Asistencia en la gestión de tu billetera virtual, abonos o retiros.</li>
-            <li>Problemas con la compra o venta de acciones o activos.</li>
-            <li>Consultas sobre la visualización de gráficos de acciones en tiempo real.</li>
-            <li>Cualquier otro inconveniente relacionado con tu cuenta o transacciones.</li>
-        </ul>
-
-        <h2>Chat de Soporte en Tiempo Real</h2>
-        <p>Puedes acceder a nuestro chat en vivo a través del siguiente botón. Un agente de soporte estará disponible para asistirte.</p>
-
-        <!-- Simulación de un botón de acceso al chat -->
-        <div class="text-center mt-4">
-            <button class="btn btn-primary btn-lg">
-                <i class="fas fa-comments"></i> Iniciar Chat de Soporte
-            </button>
-        </div>
-
-        <!-- Sección de chat en vivo simulada (solo visual) -->
-        <div class="chat-window mt-5 p-3 border rounded bg-light" style="max-width: 600px; margin: 0 auto;">
-            <h3 class="text-center">Chat de Soporte Técnico</h3>
-            <div class="chat-box" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-                <!-- Ejemplo de mensajes en el chat -->
-                <div class="message-left">
-                    <p><strong>Soporte:</strong> ¡Hola! ¿En qué puedo ayudarte hoy?</p>
-                </div>
-                <div class="message-right">
-                    <p><strong>Usuario:</strong> Tengo un problema con el retiro de mi billetera virtual.</p>
-                </div>
-            </div>
-
-            <div class="input-group mt-3">
-                <input type="text" class="form-control" placeholder="Escribe tu mensaje aquí...">
-                <button class="btn btn-primary" type="button">Enviar</button>
+        <!-- Soporte por Correo -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Soporte por Correo</h5>
+                <p class="card-text">Si prefieres enviarnos un correo, puedes hacerlo a través de: <a href="mailto:soporte@chanchitoinversiones.com">soporte@chanchitoinversiones.com</a></p>
             </div>
         </div>
-
-        <p class="mt-4 text-center">Nuestro equipo está disponible de lunes a viernes, de 9:00 AM a 6:00 PM. Si no estamos en línea, puedes dejarnos un mensaje y te responderemos lo antes posible.</p>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center py-3 mt-5">
-        <p>&copy; 2024 Chanchito Inversiones. Todos los derechos reservados.</p>
-        <p><a href="contact.html" class="text-white">Contáctanos</a> | <a href="terms.html" class="text-white">Términos y Condiciones</a></p>
-    </footer>
+    <div id="footer"></div>
 
     <!-- Scripts -->
     <script src="../assets/js/app.js"></script>
@@ -96,3 +59,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
